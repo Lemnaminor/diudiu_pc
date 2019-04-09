@@ -1,0 +1,30 @@
+$sizeColor1: #f4f4f4;
+
+
+#headerNav_box {
+    .headerNav_box1 {
+        color: #fff;
+        background-image: linear-gradient(90deg,#222325,#3b3c3f,#222325);
+        .headerNav_cont1 {
+            height: 40px;
+            line-height: 40px;
+            img {
+                height: 26px;
+                vertical-align: top;
+                margin-top: 7px;
+            }
+            span {
+                color: $sizeColor1;
+                margin-left: 2px;
+                font-size: $fontSize_12;
+            }
+            .textRight {
+                color: #fff;
+                font-size: $fontSize_12;
+            }
+        }
+    }
+    // .headerNav_box2 {
+        
+    // }
+}
