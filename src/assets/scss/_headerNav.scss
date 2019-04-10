@@ -24,7 +24,15 @@ $sizeColor1: #f4f4f4;
             }
         }
     }
-    // .headerNav_box2 {
-        
-    // }
+    .headerNav_box2 {
+        height: 75px;
+        line-height: 75px;
+        background: #fff;
+        @include box-shadow(0 2px 5px 1px rgba(0,0,0,.05));
+        .headerNav_cont2 {
+            &>a {
+                margin-right: 30px;
+            }
+        }
+    }
 }

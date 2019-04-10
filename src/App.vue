@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import headerNav from './components/headerNav'
+// import headerNav from './components/headerNav'
 
 export default {
   name: 'App',
   components:{
-    headerNav
+    // headerNav
   }
 }
 </script>

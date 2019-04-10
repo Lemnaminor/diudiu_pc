@@ -6,10 +6,11 @@
                 <a-row>
                     <a-col :span="12">
                         <img src="../assets/images/logo.png" alt="">
-                        <span>丢丢网：找的回来算我输！</span>
                     </a-col>
                     <a-col :span="12" class="textRight">
-                        <router-link to="#"><i class="iconfont icon-wode white"></i>&nbsp;<span>登录</span></router-link>
+                        <i class="iconfont icon-wode white"></i>
+                        <router-link to="#"><span>登录</span></router-link>&nbsp;&nbsp;/
+                        <router-link to="#"><span>注册</span></router-link>
                     </a-col>
                 </a-row>
             </a-layout-content>
@@ -17,14 +18,22 @@
 
         <div class="headerNav_box2">
             <a-layout-content class="cont headerNav_cont2">
-                <router-link to="path">首页</router-link>
-                <router-link to="path">寻物</router-link>
-                <router-link to="path">寻宠</router-link>
-                <router-link to="path">寻人</router-link>
-                <router-link to="path">招领</router-link>
-                <router-link to="path">新闻</router-link>
+                <router-link to="path">网站首页</router-link>
+                <router-link to="path">寻物启事</router-link>
+                <router-link to="path">寻宠启事</router-link>
+                <router-link to="path">寻人启事</router-link>
+                <router-link to="path">招领启事</router-link>
+                <router-link to="path">新闻资讯</router-link>
                 <router-link to="path">关于丢丢</router-link>
+                
+                <span class="fr">
+                    <a-button type="primary" class="margin-xs">发布</a-button>
+                    <a-input-search placeholder="请输入搜索内容..." style="width: 200px">
+
+                    </a-input-search>
+                </span>
             </a-layout-content>
+
         </div>
 
     </div>
@@ -37,5 +46,5 @@
 
 
 <style lang="scss">
-/* @import '~@/assets/scss/_headerNav'; */
+@import '~@/assets/scss/_headerNav';
 </style>

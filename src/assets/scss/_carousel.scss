@@ -1,0 +1,15 @@
+#carousel_box {
+    .slick-list {
+        width: 100%;
+        @include border-radius(10px);
+        img {
+            @include border-radius(10px);
+        }
+    }
+    .slick-dots {
+        bottom: 20px;
+        li {
+            margin: 0 3px;
+        }
+    }
+}
