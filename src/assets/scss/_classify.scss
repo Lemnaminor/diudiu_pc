@@ -1,0 +1,21 @@
+#classify_box {
+    margin-top: 30px;
+    .iconfont {
+        margin-right: 3px;
+    }
+    .ant-layout-content {
+        .ant-row {
+            padding: 10px 0;
+            .ant-col-2 {
+                &>span {
+                    line-height: 32px;
+                }
+            }
+            .ant-col-22 {
+                &>div {
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
