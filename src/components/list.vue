@@ -124,5 +124,5 @@
 
 
 <style lang="scss">
-  @import '~@/assets/scss/_list';
+@import '~@/assets/scss/_list';
 </style>

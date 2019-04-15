@@ -7,6 +7,12 @@
         <div class="cont list_box1">
             <list></list>
         </div>
+
+        <div class="index_footer">
+            <div class="cont">
+                <comFooter></comFooter>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -15,6 +21,7 @@
     import headerNav from '../components/headerNav'
     import classify from '../components/classify'
     import list from '../components/list'
+    import comFooter from '../components/footer'
 
     export default{
         data(){
@@ -29,7 +36,8 @@
         components:{
             headerNav,
             classify,
-            list
+            list,
+            comFooter
         },
         created: function(){
 
@@ -45,5 +53,5 @@
 @import '//at.alicdn.com/t/font_1068405_1uqcp57coy8.css';
 </style>
 <style lang="scss">
-@import '~@/assets/scss/index';
+@import '~@/assets/scss/_index';
 </style>

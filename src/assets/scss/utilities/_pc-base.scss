@@ -16,10 +16,10 @@ body {
     height: 500px;
     color: $sizeColor;
     // background-image: $bgImg;
-    background-size: cover;
-    overflow-x:hidden;
+    // background-size: cover;
+    // overflow-x:hidden;
     font:1.4rem $pcFont;
-    touch-action: none;
+    // touch-action: none;
 }
 h1,h2,h3,h4,h5,h6 {
     font-weight:normal;
@@ -86,4 +86,4 @@ input, textarea, select {
 }
 
 // scrollbar
-@include scrollbar(0px, rgba(0,0,0,0), #fff, #fff, #348fff, 3px);
+@include scrollbar(5px, rgba(0,0,0,.5), #ccc, #333, #348fff, 3px);
