@@ -7,7 +7,7 @@ import classify from '@/components/classify'
 
 import index from '@/views/index'
 
-import {Row,Col,Layout,Button,Input,Carousel,DatePicker,LocaleProvider,Tag,Cascader,Select,List,Avatar,Card} from 'ant-design-vue'
+import {Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,Popover} from 'ant-design-vue'
 
 import moment from 'moment';
 import 'moment/locale/zh-cn';
@@ -20,6 +20,7 @@ Vue.use(Row)
 Vue.use(Col)
 Vue.use(Layout)
 Vue.use(Button)
+Vue.use(Icon)
 Vue.use(Input)
 Vue.use(Carousel)
 Vue.use(DatePicker)
@@ -31,6 +32,7 @@ Vue.use(Select)
 Vue.use(List)
 Vue.use(Avatar)
 Vue.use(Card)
+Vue.use(Popover)
 
 
 export default new Router({
