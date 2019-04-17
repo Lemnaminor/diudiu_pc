@@ -18,12 +18,12 @@
 
         <div class="headerNav_box2">
             <a-layout-content class="cont headerNav_cont2">
-                <router-link to="path">网站首页</router-link>
+                <router-link to="/">网站首页</router-link>
                 <router-link to="path">寻物启事</router-link>
                 <router-link to="path">寻宠启事</router-link>
                 <router-link to="path">寻人启事</router-link>
                 <router-link to="path">招领启事</router-link>
-                <router-link to="path">新闻资讯</router-link>
+                <router-link to="/news">新闻资讯</router-link>
                 <router-link to="path">关于丢丢</router-link>
                 
                 <span class="fr">

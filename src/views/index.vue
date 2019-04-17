@@ -1,6 +1,6 @@
 <template>
     <div id="index_box">
-        <headerNav></headerNav>
+
         <!-- <carousel :imgs="imgs"></carousel> -->
         <classify></classify>
 
@@ -8,20 +8,15 @@
             <list></list>
         </div>
 
-        <div class="index_footer">
-            <div class="cont">
-                <comFooter></comFooter>
-            </div>
-        </div>
+
     </div>
 </template>
 
 
 <script>
-    import headerNav from '../components/headerNav'
     import classify from '../components/classify'
     import list from '../components/list'
-    import comFooter from '../components/footer'
+
 
     export default{
         data(){
@@ -34,10 +29,8 @@
             }
         },
         components:{
-            headerNav,
             classify,
-            list,
-            comFooter
+            list
         },
         created: function(){
 
@@ -49,9 +42,6 @@
 </script>
 
 
-<style>
-@import '//at.alicdn.com/t/font_1068405_1uqcp57coy8.css';
-</style>
 <style lang="scss">
 @import '~@/assets/scss/_index';
 </style>

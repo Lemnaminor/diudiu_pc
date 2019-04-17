@@ -1,0 +1,46 @@
+$imgHeight: 110px;
+
+#newsList_box {
+    .ant-list-item {
+        margin-bottom: 20px;
+        @extend %dd_bg;
+        .newsList_info1 {
+            height: $imgHeight;
+            overflow: hidden;
+            &>img {
+                display: block;
+                width: 100%;
+                min-height: $imgHeight;
+            }
+        }
+        .newsList_info2 {
+            text-align: justify;
+            padding-left: 20px;
+            strong {
+                display: block;
+                color: $size-color1;
+                margin-bottom: 10px;
+                font-size: $fontSize-16;
+            }
+            &>p {
+                height: 42px;
+                color: $size-color2;
+                line-height: 1.5;
+                margin-bottom: 10px;
+                font-size: $fontSize-14;
+                @include multiLine-overflow(2);
+            }
+            .newsList_info3 {
+                color: $size-color3;
+                &>span {
+                    margin-right: 15px;
+                    i {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: -3px 5px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

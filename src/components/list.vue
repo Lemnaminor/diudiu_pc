@@ -47,69 +47,69 @@
 
 <script>
   const data = [{
-      header: 'http://www.diudiuo.com/images/head1.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/lose1.jpeg',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head2.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/lose2.jpeg',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head3.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/lose3.jpeg',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head4.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/chong1.png',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head5.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/chong2.png',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head6.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/chong3.jpeg',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head7.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/chong4.jpeg',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
-    {
-      header: 'http://www.diudiuo.com/images/head8.jpg',
-      name: '老王',
-      time: '2019-01-01',
-      content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
-      imgUrl: 'http://www.diudiuo.com/images/chong5.png',
-      address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
-    },
+    header: 'http://www.diudiuo.com/images/head1.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/lose1.jpeg',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head2.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/lose2.jpeg',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head3.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/lose3.jpeg',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head4.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/chong1.png',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head5.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/chong2.png',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head6.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/chong3.jpeg',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head7.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/chong4.jpeg',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
+  {
+    header: 'http://www.diudiuo.com/images/head8.jpg',
+    name: '老王',
+    time: '2019-01-01',
+    content: '白色谷歌（摩托罗拉）nexus6手机，丢失地点在江东颐高数码广场2号门朝晖路往南那条路上，希望捡到的、见到别人捡到的或者朋友捡到的好心人联系我！！！',
+    imgUrl: 'http://www.diudiuo.com/images/chong5.png',
+    address: '浙江 宁波市 海曙区 蓝天路108号中信白云',
+  },
   ]
 
   export default {
@@ -124,5 +124,5 @@
 
 
 <style lang="scss">
-@import '~@/assets/scss/_list';
+  @import '~@/assets/scss/_list';
 </style>

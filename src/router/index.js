@@ -6,6 +6,7 @@ import carousel from '@/components/carousel'
 import classify from '@/components/classify'
 
 import index from '@/views/index'
+import news from '@/views/news'
 
 import {Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,Popover} from 'ant-design-vue'
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: news
     },
     {
       path: '/headerNav',
