@@ -4,9 +4,14 @@ $imgHeight: 110px;
     .ant-list-item {
         margin-bottom: 20px;
         @extend %dd_bg;
+        .ant-list-item-content {
+            margin-bottom: 0;
+            padding: 15px 0;
+        }
         .newsList_info1 {
             height: $imgHeight;
             overflow: hidden;
+            @include border-radius(5px);
             &>img {
                 display: block;
                 width: 100%;

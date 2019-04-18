@@ -1,0 +1,17 @@
+#ad_box {
+    @extend %dd_bg;
+    .ant-list-header {
+        @extend %title1;
+    }
+    .ant-list-item {
+        .ant-list-item-content {
+            margin-bottom: 0;
+            .ant-layout-content {
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

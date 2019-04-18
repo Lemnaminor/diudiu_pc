@@ -20,6 +20,8 @@
     </div>
 </template>
 <script>
+
+
     const listData = [
         {
             "hrefUrl": "../detail/newsDetail",
@@ -131,7 +133,7 @@
                     onChange: (page) => {
                         console.log(page);
                     },
-                    pageSize: 3,
+                    pageSize: 5,
                 },
 
             }
