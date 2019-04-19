@@ -1,5 +1,6 @@
 $sizeColor1: #f4f4f4;
-
+$navHeight: 75px;
+$subNavHeight: 30px;
 
 #headerNav_box {
     .headerNav_box1 {
@@ -25,14 +26,39 @@ $sizeColor1: #f4f4f4;
         }
     }
     .headerNav_box2 {
-        height: 75px;
-        line-height: 75px;
+        height: $navHeight;
+        line-height: $navHeight;
         background: #fff;
         @include box-shadow(0 2px 5px 1px rgba(0,0,0,.05));
         .headerNav_cont2 {
-            &>a {
-                margin-right: 30px;
+            .headerNav_info1 {
+                .ant-menu-horizontal {
+                    border: 0;
+                    height: ($navHeight - 15px);
+                    line-height: ($navHeight - 15px);
+                    padding-top: 7px;
+                    .ant-menu-item,.ant-menu-submenu {
+                        border-bottom: 0;
+                    }
+                }
             }
         }
+    }
+}
+
+.ant-menu-submenu {
+    .ant-menu-item {
+        height: $subNavHeight;
+        line-height: $subNavHeight;
+        margin-bottom: 4px!important;
+        &:hover {
+            color: #1890ff;
+            background-color: #e6f7ff;
+            @include transition(all 100ms);
+        }
+    }
+    .anticon-down {
+        margin-left: 1px;
+        font-size: 10px;
     }
 }

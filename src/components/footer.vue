@@ -39,14 +39,15 @@
                         </a-col>
                     </a-row>
                     <a-layout-content>
-                        <div class="bdsharebuttonbox">
+                        <div id="bdshare" class="bdsharebuttonbox bdshare_t bds_tools get-codes-bdshare">
                             <a href="#" class="bds_more" data-cmd="more"></a>
                             <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
                             <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
                             <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
                             <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                            <a class="bds_count" data-cmd="count"></a>
+                            <a class="shareCount"></a> 
                         </div>
-
                     </a-layout-content>
                 </a-col>
                 <a-col :span="7" class="footer_info3">
@@ -107,7 +108,7 @@
             </a-row>
         </a-layout-content>
         <a-layout-content class="copyright">
-            <p>©2018 丢丢网 版权所有 蜀 ICP 备 17021456 号</p>
+            <p>©2018 丢丢网 版权所有 蜀ICP备19007965号</p>
             <p><img src="~images/gongan.png" alt=""> 公安网备案号：2016090902497号</p>
         </a-layout-content>
     </div>
@@ -123,38 +124,38 @@
         },
         methods: {
             
-            setShare() {
-                //分享相关代码
-                window._bd_share_config = {
-                    "common": {
-                        "bdSnsKey": {}, 
-                        "bdText": "", 
-                        "bdMini": "2", 
-                        "bdMiniList": false, 
-                        "bdPic": "", 
-                        "bdStyle": "0", 
-                        "bdSize": "24"
-                    },
-                    "share": {},
-                    // "image": { "viewList": ["tsina", "sqq", "qzone", "weixin"], "viewText": "分享到：", "viewSize": "24" },
-                    // "selectShare": {
-                    //     "bdContainerClass": null,
-                    //     "bdSelectMiniList": ["tsina", "sqq", "qzone", "weixin"]
-                    // }
-                };
-                const s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
-                document.body.appendChild(s);
+            // setShare() {
+            //     //分享相关代码
+            //     window._bd_share_config = {
+            //         "common": {
+            //             "bdSnsKey": {}, 
+            //             "bdText": "", 
+            //             "bdMini": "2", 
+            //             "bdMiniList": false, 
+            //             "bdPic": "", 
+            //             "bdStyle": "0", 
+            //             "bdSize": "24"
+            //         },
+            //         "share": {},
+            //         // "image": { "viewList": ["tsina", "sqq", "qzone", "weixin"], "viewText": "分享到：", "viewSize": "24" },
+            //         // "selectShare": {
+            //         //     "bdContainerClass": null,
+            //         //     "bdSelectMiniList": ["tsina", "sqq", "qzone", "weixin"]
+            //         // }
+            //     };
+            //     const s = document.createElement('script');
+            //     s.type = 'text/javascript';
+            //     s.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
+            //     document.body.appendChild(s);
 
-            },
+            // },
 
         },
         created() {
-            const that = this;
-            setTimeout(() => {
-                that.setShare()
-            }, 0)
+            // const that = this;
+            // setTimeout(() => {
+            //     that.setShare()
+            // }, 0)
         },
 
     }
