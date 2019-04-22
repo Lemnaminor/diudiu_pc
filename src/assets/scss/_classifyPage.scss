@@ -1,6 +1,15 @@
 #classifyPage_box {
+    @extend %cont;
+    margin-top: 30px;
     .classifyPage_cont1{
-
+        .classifyPage_info1 {
+            padding-right: 8px;
+            @include box-sizing();
+        }
+        .classifyPage_info2 {
+            padding-left: 8px;
+            @include box-sizing();
+        }
     }
     .classifyPage_cont2 {
         margin-top: 30px;

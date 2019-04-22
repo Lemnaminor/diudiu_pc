@@ -1,36 +1,38 @@
 $inputWidth1: 225px;
+$inputHeight1: 28px;
 
 #classify_box {
-    margin-top: 30px;
+    width: 100%;
+    height: 216px;
     .iconfont {
         margin-right: 3px;
     }
     .ant-layout-content {
         .ant-row {
-            &:first-child {
+            &:nth-child(1) {
                 .ant-cascader-picker {
                     width: $inputWidth1;
                 }
             }
             &:nth-child(2) {
-                .ant-cascader-picker {
-                    width: 170px;
-                }
-            }
-            &:nth-child(3){
                 .ant-calendar-picker {
                     width: $inputWidth1;
                 }
             }
-            padding: 10px 0;
-            .ant-col-2 {
-                &>span {
-                    line-height: 32px;
+            &:nth-child(3){
+                .ant-cascader-picker {
+                    width: $inputWidth1;
                 }
             }
-            .ant-col-22 {
+            padding: 5px 0;
+            .ant-col-4 {
+                &>span {
+                    line-height: $inputHeight1;
+                }
+            }
+            .ant-col-20 {
                 &>div {
-                    line-height: 32px;
+                    line-height: $inputHeight1;
                 }
             }
         }

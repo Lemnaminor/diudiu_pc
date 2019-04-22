@@ -1,7 +1,17 @@
 <template>
     <div id="classifyPage_box">
+        <a-layout-content>
+            <breadCrumb></breadCrumb>
+        </a-layout-content>
         <a-layout-content class="classifyPage_cont1">
-            <classify></classify>
+            <a-row>
+                <a-col :span="12" class="classifyPage_info1">
+                    <classify></classify>
+                </a-col>
+                <a-col :span="12" class="classifyPage_info2">
+                    <notice></notice>
+                </a-col>
+            </a-row>
         </a-layout-content>
         <a-layout-content class="classifyPage_cont2">
             <list></list>
@@ -13,6 +23,8 @@
 <script>
 import classify from '../components/classify'
 import list from '../components/list'
+import notice from '../components/notice'
+import breadCrumb from '../components/breadCrumb'
 
 export default {
     data(){
@@ -22,7 +34,9 @@ export default {
     },
     components: {
         classify,
-        list
+        list,
+        notice,
+        breadCrumb
     }
 }
 </script>

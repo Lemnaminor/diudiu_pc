@@ -12,7 +12,7 @@ import classifyPage from '@/views/classifyPage'
 import { 
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
-  Popover,Dropdown,Menu
+  Popover,Dropdown,Menu,Breadcrumb
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -41,6 +41,7 @@ Vue.use(Card)
 Vue.use(Popover)
 Vue.use(Dropdown)
 Vue.use(Menu)
+Vue.use(Breadcrumb)
 
 
 export default new Router({
