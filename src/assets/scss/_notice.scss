@@ -1,0 +1,13 @@
+#notice_box {
+    padding-top: 12px;
+    @extend %dd_bg;
+    &>p {
+        border-bottom: 1px solid #e8e8e8;
+        @extend %title2;
+    }
+    &>div {
+        height: 175px;
+        line-height: 2;
+        padding: 8px 0;
+    }
+}

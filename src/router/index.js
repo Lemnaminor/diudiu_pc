@@ -7,6 +7,7 @@ import classify from '@/components/classify'
 
 import index from '@/views/index'
 import news from '@/views/news'
+import classifyPage from '@/views/classifyPage'
 
 import { 
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
@@ -48,6 +49,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
+    },
+    {
+      path: '/classifyPage',
+      name: 'classifyPage',
+      component: classifyPage
     },
     {
       path: '/news',

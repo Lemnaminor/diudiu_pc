@@ -1,0 +1,24 @@
+#indexNewsList_box {
+    @extend %dd_bg;
+    .ant-list {
+        .ant-list-header {
+            @extend %title2;
+        }
+        .ant-list-item {
+            .ant-list-item-content {
+                &>a:hover {
+                    color: $index_color1;
+                    @include transition(all 10ms);
+                }
+                display: block;
+                width: 100%;
+                @include line-overflow();
+                p {
+                    display: block;
+                    width: 100%;
+                    @include line-overflow();
+                }
+            }
+        }
+    }
+}

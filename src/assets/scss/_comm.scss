@@ -1,3 +1,7 @@
+//variable
+$index_color1: #1890ff;
+
+
 body,
 html {
   background: url('~images/body_bg1.png') repeat;
@@ -16,6 +20,10 @@ html {
   padding: 0 15px;
   @include border-radius(10px);
   @include box-shadow(0 1px 2px 1px rgba(0,0,0,.03));
+}
+%cont {
+  width: 1200px;
+  margin: 0 auto;
 }
 .line-overflow {
   @include line-overflow();
@@ -42,4 +50,16 @@ html {
   font-weight: bold;
   font-size: $fontSize-18;
   @include line-overflow();
+}
+%title2 {
+  padding-bottom: 6px;
+  font-weight: bold;
+  font-size: $fontSize-15;
+  @include line-overflow();
+}
+.domHidden {
+  display: none;
+}
+.domShow {
+  display: inline-block;
 }

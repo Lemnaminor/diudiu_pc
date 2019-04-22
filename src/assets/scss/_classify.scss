@@ -1,3 +1,5 @@
+$inputWidth1: 225px;
+
 #classify_box {
     margin-top: 30px;
     .iconfont {
@@ -5,6 +7,21 @@
     }
     .ant-layout-content {
         .ant-row {
+            &:first-child {
+                .ant-cascader-picker {
+                    width: $inputWidth1;
+                }
+            }
+            &:nth-child(2) {
+                .ant-cascader-picker {
+                    width: 170px;
+                }
+            }
+            &:nth-child(3){
+                .ant-calendar-picker {
+                    width: $inputWidth1;
+                }
+            }
             padding: 10px 0;
             .ant-col-2 {
                 &>span {
@@ -18,4 +35,7 @@
             }
         }
     }
+}
+.ant-cascader-menu {
+    height: 250px;
 }

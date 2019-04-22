@@ -1,3 +1,27 @@
-.list_box1 {
-    margin-top: 30px!important;
+%offset1 {
+    padding: 0 0 0 16px;
+    @include box-sizing();
+}
+
+
+#index_box {
+    .carousel_box {
+        margin-top: 30px;
+        @extend %cont;
+        .carousel_cont1 {
+            padding: 0 8px 0 0;
+            @include box-sizing();
+        }
+        .carousel_cont2 {
+            padding: 0 0 0 8px;
+            @include box-sizing();
+            // @extend %offset1;
+        }
+        .carousel_cont3 {
+            @extend %offset1;
+        }
+    }
+    .list_box1 {
+        margin-top: 30px!important;
+    }
 }

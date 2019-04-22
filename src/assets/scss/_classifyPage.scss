@@ -1,0 +1,9 @@
+#classifyPage_box {
+    .classifyPage_cont1{
+
+    }
+    .classifyPage_cont2 {
+        margin-top: 30px;
+        @extend %cont;
+    }
+}

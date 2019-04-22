@@ -1,5 +1,5 @@
 <template>
-  <div id="carousel_box" class="cont margin-top">
+  <div id="carousel_box">
     <a-carousel autoplay>
             <img v-for="(item,index) in imgs" :key="index" class="imgAuto" :src="item.url" alt="">
     </a-carousel>
@@ -15,7 +15,7 @@
             }
         },
         props: {
-            imgs: Object
+            imgs: Array
         },
     }
 </script>

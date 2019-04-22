@@ -25,20 +25,22 @@
                             <a-menu-item key="home">
                                 <router-link to="/">网站首页</router-link>
                             </a-menu-item>
+                            
                             <a-sub-menu key="classify">
                                 <span slot="title" class="submenu-title-wrapper">
-                                    分类寻找<a-icon type="down" /></span>
-                                    <a-menu-item key="classify:1">最新</a-menu-item>
-                                    <a-menu-item key="classify:2">附近</a-menu-item>
-                                    <a-menu-item key="classify:3">榜单</a-menu-item>
-                                    <a-menu-item key="classify:4">寻物</a-menu-item>
-                                    <a-menu-item key="classify:5">寻人</a-menu-item>
-                                    <a-menu-item key="classify:6">寻宠</a-menu-item>
-                                    <a-menu-item key="classify:7">赏金</a-menu-item>
-                                    <a-menu-item key="classify:8">招领</a-menu-item>
+                                        分类寻找<a-icon type="down" />
+                                </span>
+                                    <a-menu-item key="classify:1"><router-link to="/classifyPage">最新</router-link></a-menu-item>
+                                    <a-menu-item key="classify:2"><router-link to="/classifyPage">附近</router-link></a-menu-item>
+                                    <a-menu-item key="classify:3"><router-link to="/classifyPage">榜单</router-link></a-menu-item>
+                                    <a-menu-item key="classify:4"><router-link to="/classifyPage">寻物</router-link></a-menu-item>
+                                    <a-menu-item key="classify:5"><router-link to="/classifyPage">寻人</router-link></a-menu-item>
+                                    <a-menu-item key="classify:6"><router-link to="/classifyPage">寻宠</router-link></a-menu-item>
+                                    <a-menu-item key="classify:7"><router-link to="/classifyPage">赏金</router-link></a-menu-item>
+                                    <a-menu-item key="classify:8"><router-link to="/classifyPage">招领</router-link></a-menu-item>
                             </a-sub-menu>
                             <a-menu-item key="release">
-                                我要发布
+                                <router-link to="/release">我要发布</router-link>
                             </a-menu-item>
                             <a-menu-item key="news">
                                 <router-link to="/news">新闻资讯</router-link>
@@ -76,7 +78,7 @@
     export default {
         data() {
             return {
-                current: ['home']
+                current: ['classify']
             }
         }
     }

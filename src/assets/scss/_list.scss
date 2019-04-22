@@ -42,8 +42,16 @@
             border-top: 1px dotted #ddd;
             .ant-row {
                 padding: 5px 0;
-                .ant-col-8 {
+                .ant-col-8,.ant-col-12 {
+                    height: 24px;
+                    line-height: 24px;
                     text-align: center;
+                    &:first-child {
+                        .bds_more {
+                            padding-left: 20px;
+                            font-size: $fontSize-12!important;
+                        }
+                    }
                     &:last-child::before{
                         display: none;
                     }
@@ -71,5 +79,9 @@
                 }
             }
         }
+    }
+    .more_box {
+        text-align: center;
+        margin-top: 20px;
     }
 }
