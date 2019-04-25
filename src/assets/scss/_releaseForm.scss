@@ -1,0 +1,33 @@
+.inputWidth1 {
+    width: 175px!important;
+}
+
+#releaseForm_box {
+    .releaseForm_title1 {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        font-size: $fontSize-18;
+        @include line-overflow();
+        @include box-sizing();
+    }
+    .releaseForm_cont1 {
+        padding: 16px 0;
+        .ant-col-12,
+        .ant-col-24 {
+            margin-bottom: 15px;
+            .ant-col-6,
+            .ant-col-3 {
+                span {
+                    line-height: 30px;
+                    i {
+                        display: inline-block;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

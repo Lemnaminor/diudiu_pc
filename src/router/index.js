@@ -8,11 +8,13 @@ import classify from '@/components/classify'
 import index from '@/views/index'
 import news from '@/views/news'
 import classifyPage from '@/views/classifyPage'
+import release from '@/views/release'
 
 import { 
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
-  Popover,Dropdown,Menu,Breadcrumb
+  Popover,Dropdown,Menu,Breadcrumb,Divider,TimePicker,
+  AutoComplete,Upload,Modal,Radio
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -42,6 +44,12 @@ Vue.use(Popover)
 Vue.use(Dropdown)
 Vue.use(Menu)
 Vue.use(Breadcrumb)
+Vue.use(Divider)
+Vue.use(TimePicker)
+Vue.use(AutoComplete)
+Vue.use(Upload)
+Vue.use(Modal)
+Vue.use(Radio)
 
 
 export default new Router({
@@ -55,6 +63,11 @@ export default new Router({
       path: '/classifyPage',
       name: 'classifyPage',
       component: classifyPage
+    },
+    {
+      path: '/release',
+      name: 'release',
+      component: release
     },
     {
       path: '/news',
