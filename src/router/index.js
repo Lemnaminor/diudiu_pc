@@ -14,7 +14,7 @@ import {
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
   Popover,Dropdown,Menu,Breadcrumb,Divider,TimePicker,
-  AutoComplete,Upload,Modal,Radio
+  AutoComplete,Upload,Modal,Radio,Checkbox
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -50,6 +50,7 @@ Vue.use(AutoComplete)
 Vue.use(Upload)
 Vue.use(Modal)
 Vue.use(Radio)
+Vue.use(Checkbox)
 
 
 export default new Router({

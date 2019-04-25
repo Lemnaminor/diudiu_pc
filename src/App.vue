@@ -33,7 +33,7 @@
 
 
 <style>
-  @import '//at.alicdn.com/t/font_1068405_1uqcp57coy8.css';
+  @import '//at.alicdn.com/t/font_1068405_ncbdz2fhlpg.css';
 </style>
 <style lang="scss">
   @import '~@/assets/scss/main';

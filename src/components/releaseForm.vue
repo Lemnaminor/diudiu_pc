@@ -6,7 +6,7 @@
                 <a-col :span="12">
                     <a-row>
                         <a-col :span="6">
-                            <span><i class="iconfont icon-fenlei"></i>发布类别：</span>
+                            <span><i class="iconfont icon-dingdan"></i>发布类别：</span>
                         </a-col>
                         <a-col :span="18">
                             <a-select class="inputWidth1" labelInValue :defaultValue="{ key: '0' }" style="width: 120px" @change="handleChange">
@@ -31,7 +31,7 @@
                 <a-col :span="12">
                     <a-row>
                         <a-col :span="6">
-                            <span><i class="iconfont icon-dingwei"></i>丢失时间：</span>
+                            <span><i class="iconfont icon-lishi"></i>丢失时间：</span>
                         </a-col>
                         <a-col :span="18">
                             <a-date-picker class="inputWidth1" showTime format="YYYY-MM-DD HH:mm:ss" placeholder="Select Time" @change="onChangeTime"
@@ -54,7 +54,7 @@
                 </a-col>
                 <a-col :span="24">
                     <a-col :span="3">
-                        <span><i class="iconfont icon-dingwei"></i>内容描述：</span>
+                        <span><i class="iconfont icon-bianji"></i>内容描述：</span>
                     </a-col>
                     <a-col :span="21">
                         <a-textarea placeholder="请填写详细内容描述..." :rows="4" />
@@ -62,14 +62,14 @@
                 </a-col>
                 <a-col :span="24">
                     <a-col :span="3">
-                        <span><i class="iconfont icon-dingwei"></i>图片上传：</span>
+                        <span><i class="iconfont icon-shangchuan"></i>图片上传：</span>
                     </a-col>
                     <a-col :span="21">
                         <div class="clearfix">
                             <a-upload action="" listType="picture-card" :fileList="fileList" @preview="handlePreviewUpload" @change="handleChangeUpload">
                                 <div v-if="fileList.length < 6">
                                     <a-icon type="plus" />
-                                    <div class="ant-upload-text">Upload</div>
+                                    <div class="ant-upload-text">选择上传</div>
                                 </div>
                             </a-upload>
                             <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancelUpload">
@@ -80,7 +80,7 @@
                 </a-col>
                 <a-col :span="12">
                     <a-col :span="6">
-                        <span><i class="iconfont icon-dingwei"></i>联系人：</span>
+                        <span><i class="iconfont icon-wode"></i>联系人：</span>
                     </a-col>
                     <a-col :span="18">
                         <a-input placeholder="请填写联系人姓名" class="inputWidth1" />
@@ -88,7 +88,7 @@
                 </a-col>
                 <a-col :span="12">
                     <a-col :span="6">
-                        <span><i class="iconfont icon-dingwei"></i>联系电话：</span>
+                        <span><i class="iconfont icon-dianhua"></i>联系电话：</span>
                     </a-col>
                     <a-col :span="18">
                         <a-input placeholder="请填写联系电话" class="inputWidth1" />
@@ -96,7 +96,7 @@
                 </a-col>
                 <a-col :span="12">
                     <a-col :span="6">
-                        <span><i class="iconfont icon-dingwei"></i>联系QQ：</span>
+                        <span><i class="iconfont icon-QQ"></i>联系QQ：</span>
                     </a-col>
                     <a-col :span="18">
                         <a-input placeholder="请填写联系QQ" class="inputWidth1" />
@@ -104,7 +104,7 @@
                 </a-col>
                 <a-col :span="12">
                     <a-col :span="6">
-                        <span><i class="iconfont icon-dingwei"></i>联系邮箱：</span>
+                        <span><i class="iconfont icon-email"></i>联系邮箱：</span>
                     </a-col>
                     <a-col :span="18">
                         <a-auto-complete style="width: 200px" @search="handleSearchEmail" placeholder="请填写联系邮箱" class="inputWidth1">
@@ -117,7 +117,7 @@
                 <a-col :span="24">
                     <a-row>
                         <a-col :span="3">
-                            <span><i class="iconfont icon-dingwei"></i>联系地址：</span>
+                            <span><i class="iconfont icon-dizhi"></i>联系地址：</span>
                         </a-col>
                         <a-col :span="21">
                             <a-input-group compact>
@@ -129,7 +129,7 @@
                 </a-col>
                 <a-col :span="12">
                     <a-col :span="6">
-                        <span><i class="iconfont icon-dingwei"></i>悬赏金额：</span>
+                        <span><i class="iconfont icon-jine1"></i>悬赏金额：</span>
                     </a-col>
                     <a-col :span="18">
                         <a-input placeholder="请填写悬赏金额" type="number" class="inputWidth1" />
@@ -138,7 +138,7 @@
                 <a-col :span="24">
                     <a-row>
                         <a-col :span="3">
-                            <span style="line-height:normal;"><i class="iconfont icon-dingwei"></i>付费置顶：</span>
+                            <span style="line-height:normal;"><i class="iconfont icon-jine2"></i>付费置顶：</span>
                         </a-col>
                         <a-col :span="21">
                             <a-radio-group name="radioGroup" :defaultValue="1">
@@ -149,12 +149,15 @@
                         </a-col>
                     </a-row>
                 </a-col>
+                <a-col :span="24">
+                    <a-checkbox @change="onChangeCheck">我已阅读并同意<router-link to="path">《丢丢网条款声明》</router-link>。</a-checkbox>
+                </a-col>                
 
             </a-row>
         </a-layout-content>
 
-        <a-layout-content class="more_box">
-            <a-button type="primary" :loading="loading" @click="enterLoading">
+        <a-layout-content class="more_box releaseForm_more">
+            <a-button type="primary" :loading="loading" @click="enterLoading" :disabled="isRead">
                 提交发布
             </a-button>
         </a-layout-content>
@@ -182,6 +185,10 @@
                 fileList: [],
                 //联系邮箱
                 result: [],
+                //按钮加载
+                loading: false,
+                iconLoading: false,
+                isRead: true,
 
             }
         },
@@ -228,6 +235,19 @@
                     result = ['qq.com', '163.com', 'gmail.com'].map(domain => `${value}@${domain}`);
                 }
                 this.result = result
+            },
+            //按钮加载
+            enterLoading(){
+                this.loading = true;
+            },
+            //同意条款
+            onChangeCheck (e) {
+                console.log(`checked = ${e.target.checked}`)
+                if(e.target.checked == true){
+                    this.isRead=false;
+                }else{
+                    this.isRead=true;
+                }
             },
 
         },
