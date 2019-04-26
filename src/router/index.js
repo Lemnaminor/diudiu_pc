@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import headerNav from '@/components/headerNav'
 import carousel from '@/components/carousel'
 import classify from '@/components/classify'
+import fixedNav from '@/components/fixedNav'
 
 import index from '@/views/index'
 import news from '@/views/news'
@@ -14,7 +15,7 @@ import {
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
   Popover,Dropdown,Menu,Breadcrumb,Divider,TimePicker,
-  AutoComplete,Upload,Modal,Radio,Checkbox
+  AutoComplete,Upload,Modal,Radio,Checkbox,BackTop
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -51,6 +52,7 @@ Vue.use(Upload)
 Vue.use(Modal)
 Vue.use(Radio)
 Vue.use(Checkbox)
+Vue.use(BackTop)
 
 
 export default new Router({
@@ -89,6 +91,11 @@ export default new Router({
       path: '/classify',
       name: 'classify',
       component: classify
+    },
+    {
+      path: '/fixedNav',
+      name: 'fixedNav',
+      component: fixedNav
     }
   ]
 })

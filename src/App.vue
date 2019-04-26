@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
     <headerNav></headerNav>
     <router-view/>
 
@@ -8,6 +9,8 @@
         <comFooter></comFooter>
       </div>
     </div>
+    <fixedNav></fixedNav>
+
   </div>
 </template>
 
@@ -21,19 +24,21 @@
 
   import headerNav from './components/headerNav';
   import comFooter from './components/footer';
+  import fixedNav from './components/fixedNav';
 
   export default {
     name: 'App',
     components: {
       headerNav,
-      comFooter
+      comFooter,
+      fixedNav
     }
   }
 </script>
 
 
 <style>
-  @import '//at.alicdn.com/t/font_1068405_ncbdz2fhlpg.css';
+  @import '//at.alicdn.com/t/font_1068405_j55t4i0zyg8.css';
 </style>
 <style lang="scss">
   @import '~@/assets/scss/main';

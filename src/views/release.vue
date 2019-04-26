@@ -35,7 +35,7 @@
             notice,
             ad,
             breadCrumb,
-            releaseForm
+            releaseForm,
         }
     }
 

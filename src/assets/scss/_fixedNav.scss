@@ -1,0 +1,26 @@
+#fixed_box {
+    .ant-back-top {
+        bottom: 100px;
+        .ant-back-top-inner {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 40px;
+            background:#fff;
+            margin:13px 0;
+            overflow:hidden;
+            @include border-radius(50%);
+            @include box-shadow(2px 2px 7px 3px rgba(0,0,0,.2));
+            i {
+                font-size: 26px;
+                @include transition(all 300ms);
+            }
+            &:hover {
+                i {
+                    color: $index-color1;
+                }
+            }
+        }
+    }
+}
