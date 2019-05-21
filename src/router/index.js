@@ -1,21 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import headerNav from '@/components/headerNav'
-import carousel from '@/components/carousel'
-import classify from '@/components/classify'
-import fixedNav from '@/components/fixedNav'
+// import headerNav from '@/components/headerNav'
+// import carousel from '@/components/carousel'
+// import classify from '@/components/classify'
+// import fixedNav from '@/components/fixedNav'
 
 import index from '@/views/index'
 import news from '@/views/news'
 import classifyPage from '@/views/classifyPage'
 import release from '@/views/release'
+import reply from '@/views/reply'
+import login from '@/views/login'
+import register from '@/views/register'
+import detail from '@/views/detail'
+import legal from '@/views/legal'
+import about from '@/views/about'
+import sponsor from '@/views/sponsor'
 
 import { 
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
   Popover,Dropdown,Menu,Breadcrumb,Divider,TimePicker,
-  AutoComplete,Upload,Modal,Radio,Checkbox,BackTop
+  AutoComplete,Upload,Modal,Radio,Checkbox,BackTop,
+  Badge,message,Form
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -23,8 +31,8 @@ import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 
 
-
 Vue.use(Router)
+
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Layout)
@@ -53,12 +61,25 @@ Vue.use(Modal)
 Vue.use(Radio)
 Vue.use(Checkbox)
 Vue.use(BackTop)
+Vue.use(Badge)
+Vue.use(message)
+Vue.use(Form)
+
+Vue.prototype.$message = message;
+message.config({
+    duration: 2,
+});
 
 
 export default new Router({
   routes: [
     {
       path: '/',
+      name: 'index',
+      component: index,
+    },
+    {
+      path: '/index',
       name: 'index',
       component: index
     },
@@ -78,24 +99,42 @@ export default new Router({
       component: news
     },
     {
-      path: '/headerNav',
-      name: 'headerNav',
-      component: headerNav
+      path: '/login',
+      name: 'login',
+      component: login
     },
     {
-      path: '/carousel',
-      name: 'carousel',
-      component: carousel
+      path: '/register',
+      name: 'register',
+      component: register
     },
     {
-      path: '/classify',
-      name: 'classify',
-      component: classify
+      // path: '/detail/:objectId',
+      path: '/detail',
+      name: 'detail',
+      component: detail
     },
     {
-      path: '/fixedNav',
-      name: 'fixedNav',
-      component: fixedNav
-    }
-  ]
+      path: '/reply',
+      name: 'reply',
+      component: reply
+    },
+    {
+      path: '/legal',
+      name: 'legal',
+      component: legal
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: about
+    },
+    {
+      path: '/sponsor',
+      name: 'sponsor',
+      component: sponsor
+    },
+
+  ],
+  mode: 'history'
 })

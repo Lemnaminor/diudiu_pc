@@ -9,8 +9,8 @@
                     </a-col>
                     <a-col :span="12" class="textRight">
                         <i class="iconfont icon-wode white"></i>
-                        <router-link to="#"><span>登录</span></router-link>&nbsp;&nbsp;/
-                        <router-link to="#"><span>注册</span></router-link>
+                        <router-link to="/login"><span>登录</span></router-link>&nbsp;&nbsp;/
+                        <router-link to="/register"><span>注册</span></router-link>
                     </a-col>
                 </a-row>
             </a-layout-content>
@@ -43,21 +43,23 @@
                                 <router-link to="/release">我要发布</router-link>
                             </a-menu-item>
                             <a-menu-item key="news">
-                                <router-link to="/news">新闻资讯</router-link>
+                                <router-link to="news">新闻资讯</router-link>
                             </a-menu-item>
                             <a-sub-menu key="about">
                                 <span slot="title" class="submenu-title-wrapper">
                                         其他栏目<a-icon type="down" /></span>
-                                    <a-menu-item key="about:1">我的发布/回复</a-menu-item>
-                                    <a-menu-item key="about:2">关于丢丢</a-menu-item>
-                                    <a-menu-item key="about:3">赞助丢丢</a-menu-item>
-                                    <a-menu-item key="about:4">版权说明</a-menu-item>
+                                    <a-menu-item key="about:1"><router-link to="/reply">我的发布/回复<a-badge count="8" /></router-link></a-menu-item>
+                                    <a-menu-item key="about:2"><router-link to="/about">关于丢丢</router-link></a-menu-item>
+                                    <a-menu-item key="about:3"><router-link to="/sponsor">赞助丢丢</router-link></a-menu-item>
+                                    <a-menu-item key="about:4"><router-link to="/legal">版权说明</router-link></a-menu-item>
                             </a-sub-menu>
                         </a-menu>
                     </a-col>
                     <a-col :span="6" class="headerNav_info2">
                         <span class="fr">
-                            <a-button type="primary" class="margin-xs">发布</a-button>
+                            <router-link to="/release">
+                                <a-button type="primary" class="margin-xs">发布</a-button>
+                            </router-link>
                             <a-input-search placeholder="请输入搜索内容..." style="width: 200px">
 
                             </a-input-search>
@@ -80,7 +82,8 @@
             return {
                 current: ['classify']
             }
-        }
+        },
+        name: 'headerNav'
     }
 </script>
 

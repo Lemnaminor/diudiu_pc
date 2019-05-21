@@ -6,6 +6,12 @@
         }
         .list_cont1 {
             padding-left: 50px;
+            span {
+                font-size: $fontSize-14;
+            }
+            p {
+                font-size: $fontSize-12;
+            }
         }
         .ant-row {
             padding: 10px 0;
@@ -18,10 +24,14 @@
             }
         }
         .list_content {
-            @include multiLine-overflow(3);
+            height: 41px;
+            @include multiLine-overflow(2);
         }
         .list_cont4 {
-            margin-bottom: 2px;
+            margin: 2px 0 6px;
+            .ant-tag {
+                margin-right: 6px;
+            }
         }
         .list_cont2 {
             .ant-card {

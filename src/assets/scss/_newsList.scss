@@ -1,9 +1,11 @@
 $imgHeight: 110px;
 
 #newsList_box {
+    padding-bottom: 25px;
+    @extend %dd_bg;
     .ant-list-item {
-        margin-bottom: 20px;
-        @extend %dd_bg;
+        // margin-bottom: 20px;
+        // @extend %dd_bg;
         .ant-list-item-content {
             margin-bottom: 0;
             padding: 15px 0;
@@ -27,7 +29,7 @@ $imgHeight: 110px;
                 margin-bottom: 10px;
                 font-size: $fontSize-16;
             }
-            &>p {
+            p {
                 height: 42px;
                 color: $size-color2;
                 line-height: 1.5;

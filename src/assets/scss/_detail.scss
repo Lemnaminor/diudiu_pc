@@ -1,0 +1,51 @@
+#detail_box {
+    margin-top: 30px;
+    .detail_cont {
+        padding: 25px 15px;
+        @extend %dd_bg;
+        .detail_info {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            &>h2 {
+                text-align: center;
+                font-size: $fontSize-18;
+            }
+            &>p {
+                text-align: center;
+                color: $size-color3;
+                margin: 7px 0 15px;
+                span {
+                    display: inline-block;
+                    margin: 0 10px;
+                    font-size: $fontSize-13;
+                }
+            }
+            &>div {
+                p {
+                    width: 100%;
+                    text-align: justify;
+                    color: $size-color2;
+                    @include box-sizing();
+                    @include multiLine-overflow(2);
+                    em {
+                        color: $size-color2;
+                        font-style: normal;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .detail_content {
+            display: block;
+            width: 100%;
+            line-height: 26px;
+            text-align: justify;
+            color: $size-color2;
+            margin-top: 20px;
+            img {
+                max-width: 100%!important;
+                height: auto!important;
+            }
+        }
+    }
+}

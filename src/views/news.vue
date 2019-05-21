@@ -35,7 +35,7 @@
       hotNewsList,
       ad,
       breadCrumb
-    }
+    },
   }
 
 </script>

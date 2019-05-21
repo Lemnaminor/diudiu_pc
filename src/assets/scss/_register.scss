@@ -1,0 +1,35 @@
+$size-color1: #646464;
+$size-color2: #969696;
+// $size-color3: #208ec4;
+$register-height: 490px;
+
+.register-box {
+    height: $register-height;
+    margin-top: -$register-height/2;
+    .register-cont2 {
+        label {
+            width:100%;
+            p {
+                color: $size-color2;
+                font-size: $fontSize-13;
+                a {
+                    color: #999;
+                }
+            }
+        }
+    }
+    .register-cont3 {
+        display: block;
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+        span {
+            color: $size-color2;
+            font-size: $fontSize-13;
+        }
+        a {
+            color: $d-color2;
+            font-size: $fontSize-13;
+        }
+    }
+}

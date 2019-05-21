@@ -1,0 +1,38 @@
+#sponsor_box {
+    margin-top: 30px;   
+    .p1 {
+        color: #333;
+        border-bottom: 1px dotted #ccc;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-size: $fontSize-15;
+    }
+    .sponsor_cont1 {
+        @extend %dd_bg;
+        .sponsor_left {
+            text-align: center;
+            &>div {
+                display: inline-block;
+                width: 200px;
+                padding: 150px 0;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .sponsor_right {
+            text-align: center;
+            &>div {
+                display: inline-block;
+                width: 200px;
+                padding: 150px 0;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }        
+    }
+}

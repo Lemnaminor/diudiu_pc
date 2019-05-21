@@ -18,6 +18,9 @@ $subNavHeight: 30px;
                 color: $sizeColor1;
                 margin-left: 2px;
                 font-size: $fontSize_12;
+                &:hover {
+                    color: $d_color1;
+                }
             }
             .textRight {
                 color: #fff;
@@ -61,4 +64,8 @@ $subNavHeight: 30px;
         margin-left: 1px;
         font-size: 10px;
     }
+}
+
+.ant-badge-not-a-wrapper {
+    margin: -5px 0 0 5px!important;
 }

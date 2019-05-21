@@ -1,0 +1,24 @@
+#legal_box {
+    margin-top: 30px;
+    .legal_cont1 {
+        text-align: justify;
+        padding: 15px;
+        @extend %dd_bg;
+        &>h3 {
+            color: #333;
+            border-bottom: 1px dotted #ccc;
+            margin: 10px 0 5px;
+            padding-bottom: 5px;
+            font-weight: bold;
+            font-size: $fontSize-15;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        p {
+            color: #666;
+            line-height: 2;
+            font-size: $fontSize-14;
+        }
+    }
+}
