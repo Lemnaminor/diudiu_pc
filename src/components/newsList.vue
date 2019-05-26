@@ -9,7 +9,8 @@
                 </a-col>
                 <a-col :span="18" class="newsList_info2">
                   
-                  <router-link :to="{ path:'detail', query: {objectId: item.objectId} }" target="_blank">
+                  <!-- <router-link :to="{ path:'detail', query: {objectId: item.objectId} }" target="_blank"> -->
+                  <router-link to="/detail">
                     <strong>{{item.title}}</strong>
                     <p>{{item.describe}}</p>
                   </router-link>

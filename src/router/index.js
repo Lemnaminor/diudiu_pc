@@ -17,13 +17,15 @@ import detail from '@/views/detail'
 import legal from '@/views/legal'
 import about from '@/views/about'
 import sponsor from '@/views/sponsor'
+import listDetail from '@/views/listDetail'
+import personal from '@/views/personal'
 
 import { 
   Row,Col,Layout,Button,Icon,Input,Carousel,DatePicker,
   LocaleProvider,Tag,Cascader,Select,List,Avatar,Card,
   Popover,Dropdown,Menu,Breadcrumb,Divider,TimePicker,
   AutoComplete,Upload,Modal,Radio,Checkbox,BackTop,
-  Badge,message,Form
+  Badge,message,Form,Comment
 } from 'ant-design-vue'
 
 import moment from 'moment';
@@ -64,6 +66,7 @@ Vue.use(BackTop)
 Vue.use(Badge)
 Vue.use(message)
 Vue.use(Form)
+Vue.use(Comment)
 
 Vue.prototype.$message = message;
 message.config({
@@ -133,6 +136,16 @@ export default new Router({
       path: '/sponsor',
       name: 'sponsor',
       component: sponsor
+    },    
+    {
+      path: '/listDetail',
+      name: 'listDetail',
+      component: listDetail
+    },
+    {
+      path: '/personal',
+      name: 'personal',
+      component: personal
     },
 
   ],

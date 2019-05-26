@@ -50,14 +50,14 @@
   export default {
     data() {
       return {
-        objectId: '',
-        newsImg: '',
-        title: '',
-        describe: '',
-        content: '',
-        source: '',
-        time: '',
-        browse: ''
+        objectId: '1',
+        newsImg: '1',
+        title: '1',
+        describe: '2',
+        content: '3',
+        source: '2',
+        time: '1',
+        browse: '2'
       }
     },
     components: {
@@ -66,23 +66,23 @@
       breadCrumb
     },
     created() {
-      this.objectId = this.$route.query.objectId;
-      const query = Bmob.Query('news');
-      query.get(this.objectId).then(res => {
-        console.log(this.objectId)
-        console.log(res)
-        if(res){
-            this.title = res.title;
-            this.describe = res.describe;
-            this.content = res.content;
-            this.source = res.source;
-            this.time = res.time;
-            this.browse = res.browse;
-            this.newsImg = res.newsImg;
-        }
-      }).catch(err => {
-        console.log(err)
-      })
+      // this.objectId = this.$route.query.objectId;
+      // const query = Bmob.Query('news');
+      // query.get(this.objectId).then(res => {
+      //   console.log(this.objectId)
+      //   console.log(res)
+      //   if(res){
+      //       this.title = res.title;
+      //       this.describe = res.describe;
+      //       this.content = res.content;
+      //       this.source = res.source;
+      //       this.time = res.time;
+      //       this.browse = res.browse;
+      //       this.newsImg = res.newsImg;
+      //   }
+      // }).catch(err => {
+      //   console.log(err)
+      // })
     },
 
   }

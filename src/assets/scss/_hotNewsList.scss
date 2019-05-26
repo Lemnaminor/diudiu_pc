@@ -16,6 +16,7 @@ $imgHeight: 65px;
                     @include line-overflow();
                 }
                 p {
+                    height: 41px;
                     margin: 0 0 3px 0;
                     color: $size-color2;
                     @include multiLine-overflow(2);

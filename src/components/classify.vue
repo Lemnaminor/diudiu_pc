@@ -3,6 +3,20 @@
     <a-layout-content>
       <a-row>
         <a-col :span="4">
+          <span><i class="iconfont icon-fenlei"></i>分类选择：</span>
+        </a-col>
+        <a-col :span="20">
+          <a-select style="width: 150px" @change="changeClass" v-model="classValue" placeholder="请选择分类">
+            <a-select-option v-for="province in provinceData" :key="province">{{province}}</a-select-option>
+          </a-select>
+          <a-select style="width: 150px" @change="changeClassInfo" v-model="classInfoValue" placeholder="子分类"
+            :disabled="classDisabled">
+            <a-select-option v-for="classInfo in classInfoData" :key="classInfo">{{classInfo}}</a-select-option>
+          </a-select>
+        </a-col>
+      </a-row>
+      <a-row>
+        <a-col :span="4">
           <span><i class="iconfont icon-dingwei"></i>地点选择：</span>
         </a-col>
         <a-col :span="20">
@@ -18,19 +32,7 @@
           <a-range-picker @change="datapickerOnChange" v-model="dataPickerValue" />
         </a-col>
       </a-row>
-      <a-row>
-        <a-col :span="4">
-          <span><i class="iconfont icon-fenlei"></i>分类选择：</span>
-        </a-col>
-        <a-col :span="20">
-          <a-select style="width: 150px" @change="changeClass" v-model="classValue" placeholder="请选择分类">
-            <a-select-option v-for="province in provinceData" :key="province">{{province}}</a-select-option>
-          </a-select>
-          <a-select style="width: 150px" @change="changeClassInfo" v-model="classInfoValue" placeholder="子分类" :disabled="classDisabled">
-            <a-select-option v-for="classInfo in classInfoData" :key="classInfo">{{classInfo}}</a-select-option>
-          </a-select>
-        </a-col>
-      </a-row>
+
       <a-row>
         <a-col :span="4">
           <span><i class="iconfont icon-chazhao"></i>已选分类：</span>
@@ -41,7 +43,8 @@
               {{cityValue2}}</a-tag>
             <a-tag closable @close="log" v-model="dataPickerValue"
               :class="dataPickerValue == '' ? 'domHidden' : 'domShow'">{{dataPickerValue2}}</a-tag>
-            <a-tag closable @close="watchClass" v-model="classValue" :class="classValue == '' ? 'domHidden' : 'domShow'">
+            <a-tag closable @close="watchClass" v-model="classValue"
+              :class="classValue == '' ? 'domHidden' : 'domShow'">
               {{classValue2}}</a-tag>
             <a-tag closable @close="log" v-model="classInfoValue"
               :class="classInfoValue == '' ? 'domHidden' : 'domShow'">
@@ -57,7 +60,7 @@
 <script>
   import cityData from '../lib/city'
 
-  const provinceData = ['寻物启事', '寻人启事', '寻宠启事', '招领启事'];
+  const provinceData = ['寻物启事', '寻人启事', '寻宠启事', '招领启事', '赏金启事'];
 
   const classInfoData = [];
 
@@ -65,6 +68,7 @@
   const classInfoData2 = ['老人', '成年人', '青少年', '儿童', '其他'];
   const classInfoData3 = ['狗', '猫', '其他'];
   const classInfoData4 = ['寻物', '寻人', '寻宠'];
+  const classInfoData5 = ['寻物', '寻人', '寻宠'];
 
   // const classInfoData = {
   //   寻物启事: ['卡包', '钥匙', '数码电子', '金银首饰', '其他'],
@@ -86,6 +90,7 @@
         classInfoData2,
         classInfoData3,
         classInfoData4,
+        classInfoData5,
 
         classDisabled: true,
 
@@ -123,9 +128,10 @@
       },
       changeClass(value) {
 
-        if(value){
+        if (value) {
           this.classDisabled = false;
-        }else {
+          this.classInfoValue = '';
+        } else {
           this.classDisabled = true;
         }
         if (value == '寻物启事') {
@@ -136,6 +142,8 @@
           this.classInfoData = this.classInfoData3;
         } else if (value == '招领启事') {
           this.classInfoData = this.classInfoData4;
+        } else if (value == '赏金启事') {
+          this.classInfoData = this.classInfoData5;
         }
         this.classValue2 = '分类：' + value;
 
@@ -143,11 +151,11 @@
       changeClassInfo(value) {
         this.classInfoValue2 = '子分类：' + value;
       },
-      watchClass(value){
+      watchClass(value) {
         this.classDisabled = true;
         this.classInfoValue = [];
         this.classInfoValue2 = '';
-        this.$nextTick(function(){
+        this.$nextTick(function () {
           this.classValue = [];
         })
       }

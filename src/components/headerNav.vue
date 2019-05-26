@@ -26,19 +26,19 @@
                                 <router-link to="/">网站首页</router-link>
                             </a-menu-item>
                             
-                            <a-sub-menu key="classify">
+                            <!-- <a-sub-menu key="classify">
                                 <span slot="title" class="submenu-title-wrapper">
                                         分类寻找<a-icon type="down" />
                                 </span>
-                                    <a-menu-item key="classify:1"><router-link to="/classifyPage">最新</router-link></a-menu-item>
-                                    <a-menu-item key="classify:2"><router-link to="/classifyPage">附近</router-link></a-menu-item>
-                                    <a-menu-item key="classify:3"><router-link to="/classifyPage">榜单</router-link></a-menu-item>
-                                    <a-menu-item key="classify:4"><router-link to="/classifyPage">寻物</router-link></a-menu-item>
-                                    <a-menu-item key="classify:5"><router-link to="/classifyPage">寻人</router-link></a-menu-item>
-                                    <a-menu-item key="classify:6"><router-link to="/classifyPage">寻宠</router-link></a-menu-item>
-                                    <a-menu-item key="classify:7"><router-link to="/classifyPage">赏金</router-link></a-menu-item>
-                                    <a-menu-item key="classify:8"><router-link to="/classifyPage">招领</router-link></a-menu-item>
-                            </a-sub-menu>
+                                    <a-menu-item key="classify:1"><router-link to="/classifyPage">寻物</router-link></a-menu-item>
+                                    <a-menu-item key="classify:2"><router-link to="/classifyPage">寻人</router-link></a-menu-item>
+                                    <a-menu-item key="classify:3"><router-link to="/classifyPage">寻宠</router-link></a-menu-item>
+                                    <a-menu-item key="classify:4"><router-link to="/classifyPage">赏金</router-link></a-menu-item>
+                                    <a-menu-item key="classify:5"><router-link to="/classifyPage">招领</router-link></a-menu-item>
+                            </a-sub-menu> -->
+                            <a-menu-item key="release">
+                                <router-link to="/classifyPage">分类寻找</router-link>
+                            </a-menu-item>
                             <a-menu-item key="release">
                                 <router-link to="/release">我要发布</router-link>
                             </a-menu-item>
@@ -49,9 +49,10 @@
                                 <span slot="title" class="submenu-title-wrapper">
                                         其他栏目<a-icon type="down" /></span>
                                     <a-menu-item key="about:1"><router-link to="/reply">我的发布/回复<a-badge count="8" /></router-link></a-menu-item>
-                                    <a-menu-item key="about:2"><router-link to="/about">关于丢丢</router-link></a-menu-item>
-                                    <a-menu-item key="about:3"><router-link to="/sponsor">赞助丢丢</router-link></a-menu-item>
-                                    <a-menu-item key="about:4"><router-link to="/legal">版权说明</router-link></a-menu-item>
+                                    <a-menu-item key="about:2"><router-link to="/personal">个人资料</router-link></a-menu-item>
+                                    <a-menu-item key="about:3"><router-link to="/about">关于丢丢</router-link></a-menu-item>
+                                    <a-menu-item key="about:4"><router-link to="/sponsor">赞助丢丢</router-link></a-menu-item>
+                                    <a-menu-item key="about:5"><router-link to="/legal">版权说明</router-link></a-menu-item>
                             </a-sub-menu>
                         </a-menu>
                     </a-col>

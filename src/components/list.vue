@@ -4,7 +4,7 @@
     <a-list :grid="{ gutter: 16, column: 4}" :dataSource="listData">
       <a-list-item slot="renderItem" slot-scope="item, index">
         <a-row>
-          <a-col :span="18">
+          <a-col :span="16">
             <a-avatar icon="user" size="large" class="list_header" :src="item.header_img" />
             <div class="list_cont1">
               <span>{{item.username}}</span>
@@ -12,23 +12,24 @@
             </div>
             <p></p>
           </a-col>
-          <a-col :span="6" class="textRight">
+          <a-col :span="8" class="textRight">
             <!-- <a-button size="small">联系Ta</a-button> -->
             <a-layout-content class="tag_cont1">
+              <a-tag color="cyan" v-if="item.Release_type">招</a-tag>
               <a-tag color="#f00" v-if="item.top">加急</a-tag>
             </a-layout-content>
           </a-col>
         </a-row>
         <a-layout-content class="list_cont4">
           <a-tag color="#f50" v-if="item.money">赏金:{{item.money}}</a-tag>
-          <a-tag :color="item.Release_type" v-if="item.goods_class">{{item.goods_class[0]}}</a-tag>
-          <a-tag :color="item.Release_type" v-if="item.goods_class">{{item.goods_class[1]}}</a-tag>
+          <a-tag :color="item.goods_class[2]" v-if="item.goods_class">{{item.goods_class[0]}}</a-tag>
+          <a-tag :color="item.goods_class[2]" v-if="item.goods_class">{{item.goods_class[1]}}</a-tag>
         </a-layout-content>
         <a-layout-content class="list_cont2">
-          <router-link to="path">
+          <router-link to="/listDetail">
             <p class="list_content">{{item.content}}</p>
             <a-card style="width:100%;">
-              <img v-if="item.lose_img[0].thumbUrl"alt="example" :src="item.lose_img[0].thumbUrl" slot="cover" />
+              <img v-if="item.lose_img[0].thumbUrl" alt="example" :src="item.lose_img[0].thumbUrl" slot="cover" />
               <img v-else alt="example" :src="item.lose_img[0]" slot="cover" />
             </a-card>
             <p class="line-overflow">
@@ -40,16 +41,16 @@
         <a-layout-content class="list_cont3">
           <a-row>
             <a-col :span="12">
-              <router-link to="path">
+              <router-link to="/listDetail">
                 <i class="iconfont icon-xiaoxi"></i>
                 <span>888</span>
               </router-link>
             </a-col>
             <a-col :span="12">
-                <router-link to="path">
-                    <i class="iconfont icon-bianji"></i>
-                    <span>详情</span>
-                  </router-link>
+              <router-link to="/listDetail">
+                <i class="iconfont icon-bianji"></i>
+                <span>详情</span>
+              </router-link>
             </a-col>
 
             <!-- <a-col :span="12">
@@ -190,20 +191,28 @@
         iconLoading: false,
       }
     },
-    computed:{
-      addColor(){
+    computed: {
+      addColor() {
         console.log('computed!');
         console.log(this.listData)
-        this.listData.forEach((item,index) => {
-          if(item.Release_type == 1){
-            item.Release_type = 'blue';
-          }else if(item.Release_type == 2){
-            item.Release_type = 'purple';
-          }else if(item.Release_type == 3){
-            item.Release_type = 'orange';
-          }else {
+        this.listData.forEach((item, index) => {
 
+          console.log(item.Release_type);
+
+          if (item.goods_class[0] == '寻物启示') {
+            item.goods_class[2] = 'blue';
+          } else if (item.goods_class[0] == '寻人启示') {
+            item.goods_class[2] = 'purple';
+          } else if (item.goods_class[0] == '寻宠启示') {
+            item.goods_class[2] = 'orange';
           }
+
+          if (item.Release_type == 4) {
+            item.Release_type = true;
+          } else {
+            item.Release_type = false;
+          }
+
         })
       }
     },

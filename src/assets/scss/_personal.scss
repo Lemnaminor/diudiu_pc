@@ -1,0 +1,7 @@
+#personal_box {
+    margin-top: 30px;
+    .personal_cont1 {
+        padding: 15px;
+        @extend %dd_bg;
+    }
+}

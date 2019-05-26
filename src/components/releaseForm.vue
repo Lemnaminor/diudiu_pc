@@ -143,6 +143,16 @@
           </a-col>
         </a-col>
         <a-col :span="24">
+          <a-col :span="3">
+            <span><i class="iconfont icon-jine1"></i>验证码：</span>
+          </a-col>
+          <a-col :span="21">
+            <a-input placeholder="请填写验证码" type="text" class="inputWidth1" v-model="releaseData.verCode"
+              style="width:110px!important;" />
+            <img class="verCode_img" src="~images/verCode.png" alt="">
+          </a-col>
+        </a-col>
+        <a-col :span="24">
           <a-row>
             <a-col :span="3">
               <span style="line-height:normal;"><i class="iconfont icon-jine2"></i>付费置顶：</span>
@@ -156,6 +166,7 @@
             </a-col>
           </a-row>
         </a-col>
+
         <a-col :span="24">
           <a-checkbox @change="isRead">我已阅读并同意<router-link to="path">《丢丢网条款声明》</router-link>。</a-checkbox>
         </a-col>
@@ -212,7 +223,8 @@
           email: '',
           user_address: '',
           money: 0,
-          top: false
+          top: false,
+          verCode: '',
         }
 
       }
@@ -222,10 +234,10 @@
     },
     methods: {
       isTop(value) {
-        if(value.target.value == 2){
-            this.releaseData.top = false;
-        }else {
-            this.releaseData.top = true;
+        if (value.target.value == 2) {
+          this.releaseData.top = false;
+        } else {
+          this.releaseData.top = true;
         }
       },
       isRead() {
@@ -325,7 +337,7 @@
         } else if (this.isReadBool != true) {
           this.$message.error('请阅读并同意条款！');
           return false;
-        } else if(this.releaseData.lose_img!='') {
+        } else if (this.releaseData.lose_img != '') {
 
           //图片上传
           const pic = this.releaseData.lose_img;
@@ -339,9 +351,9 @@
             console.log(res);
           })
 
-          
-        }else {
-            this.releaseData.lose_img.push('http://diudiuo.com/images/zhanwei.png');
+
+        } else {
+          this.releaseData.lose_img.push('http://diudiuo.com/images/zhanwei.png');
           // 表单上传
           this.releaseSubmit();
         }
@@ -353,14 +365,14 @@
           "Release_type": this.releaseData.Release_type,
           "goods_class": this.releaseData.goods_class,
           "lose_time": this.releaseData.lose_time,
-          "lose_address": this.releaseData.lose_address+this.lose_address_info,
+          "lose_address": this.releaseData.lose_address + this.lose_address_info,
           "content": this.releaseData.content,
           "lose_img": this.releaseData.lose_img,
           "username": this.releaseData.username,
           "telphone": this.releaseData.telphone,
           "qq": this.releaseData.qq,
           "email": this.releaseData.email,
-          "user_address": this.releaseData.user_address+this.user_address_info,
+          "user_address": this.releaseData.user_address + this.user_address_info,
           "money": parseInt(this.releaseData.money),
           "top": this.releaseData.top
         }
@@ -369,7 +381,9 @@
         query.save(addList).then(res => {
           console.log(res)
           this.$message.success('提交成功！');
-          this.$router.push({path: '/index'});
+          this.$router.push({
+            path: '/index'
+          });
         }).catch(err => {
           console.log(err)
         })

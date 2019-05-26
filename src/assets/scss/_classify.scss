@@ -1,4 +1,4 @@
-$inputWidth1: 225px;
+$inputWidth1: 230px;
 $inputHeight1: 28px;
 
 #classify_box {
@@ -9,20 +9,11 @@ $inputHeight1: 28px;
     }
     .ant-layout-content {
         .ant-row {
-            &:nth-child(1) {
-                .ant-cascader-picker {
-                    width: $inputWidth1;
-                }
+            .ant-cascader-picker {
+                width: $inputWidth1;
             }
-            &:nth-child(2) {
-                .ant-calendar-picker {
-                    width: $inputWidth1;
-                }
-            }
-            &:nth-child(3){
-                .ant-cascader-picker {
-                    width: $inputWidth1;
-                }
+            .ant-calendar-picker {
+                width: $inputWidth1;
             }
             padding: 5px 0;
             .ant-col-4 {

@@ -1,0 +1,7 @@
+#listDetail_box {
+    margin-top: 30px;
+    .listDetail_cont1 {
+        padding: 25px 15px;
+        @extend %dd_bg;
+    }
+}

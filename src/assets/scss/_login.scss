@@ -29,9 +29,10 @@ $size-color2: #969696;
         margin: 37px 0;
         a img {
             display: inline-block;
-            width: 50%;
+            width: 35%;
         }
         p {
+            display: none;
             color: $size-color2;
             margin-top: 5px;
             font-weight: bold;

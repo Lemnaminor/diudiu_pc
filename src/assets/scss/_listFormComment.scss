@@ -1,0 +1,24 @@
+#listFormComment_box {
+    .listFormComment_p1 {
+        display: block;
+        background: #f4f4f4;
+        padding: 10px;
+        font-weight: bold;
+    }
+    .ant-comment {
+        .ant-comment-inner {
+            padding-bottom: 0;
+            .ant-comment-content {
+                .ant-row {
+                    margin-bottom: 10px;
+                    .ant-btn {
+                        float: right;
+                    }
+                }
+            }
+        }
+        .ant-comment-nested {
+            margin-top: 5px;
+        }
+    }
+}

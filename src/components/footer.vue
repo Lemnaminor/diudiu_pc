@@ -5,7 +5,7 @@
         <a-layout-content class="footer_cont1">
           <a-row type="flex" justify="space-between">
             <a-col :span="7" class="footer_info1">
-              <router-link to="/"><img src="~images/logo1.png" alt=""></router-link>
+              <router-link to="/"><img src="~images/logo.png" alt=""></router-link>
 
               <p>
                 &emsp;&emsp;本网站是由OneDay一天工作室开发的旗下一个公益项目。网站的主要功能是发布及寻回丢失的物品。<br>&emsp;&emsp;本网站是全公益项目，不收取任何费用，初衷是借助互联网发动人们的力量，为人们寻回丢失的物品等。
@@ -129,38 +129,38 @@
     },
     methods: {
 
-      // setShare() {
-      //     //分享相关代码
-      //     window._bd_share_config = {
-      //         "common": {
-      //             "bdSnsKey": {}, 
-      //             "bdText": "", 
-      //             "bdMini": "2", 
-      //             "bdMiniList": false, 
-      //             "bdPic": "", 
-      //             "bdStyle": "0", 
-      //             "bdSize": "24"
-      //         },
-      //         "share": {},
-      //         // "image": { "viewList": ["tsina", "sqq", "qzone", "weixin"], "viewText": "分享到：", "viewSize": "24" },
-      //         // "selectShare": {
-      //         //     "bdContainerClass": null,
-      //         //     "bdSelectMiniList": ["tsina", "sqq", "qzone", "weixin"]
-      //         // }
-      //     };
-      //     const s = document.createElement('script');
-      //     s.type = 'text/javascript';
-      //     s.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
-      //     document.body.appendChild(s);
+      setShare() {
+          //分享相关代码
+          window._bd_share_config = {
+              "common": {
+                  "bdSnsKey": {}, 
+                  "bdText": "", 
+                  "bdMini": "2", 
+                  "bdMiniList": false, 
+                  "bdPic": "", 
+                  "bdStyle": "0", 
+                  "bdSize": "24"
+              },
+              "share": {},
+              // "image": { "viewList": ["tsina", "sqq", "qzone", "weixin"], "viewText": "分享到：", "viewSize": "24" },
+              // "selectShare": {
+              //     "bdContainerClass": null,
+              //     "bdSelectMiniList": ["tsina", "sqq", "qzone", "weixin"]
+              // }
+          };
+          const s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
+          document.body.appendChild(s);
 
-      // },
+      },
 
     },
     created() {
-      // const that = this;
-      // setTimeout(() => {
-      //     that.setShare()
-      // }, 0)
+      const that = this;
+      setTimeout(() => {
+          that.setShare()
+      }, 0)
     },
 
   }

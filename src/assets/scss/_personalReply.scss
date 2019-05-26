@@ -1,0 +1,46 @@
+#personalReply_box {
+    padding: 15px;
+    @extend %dd_bg;
+    .personalReplay_cont1 {
+        &>h2 {
+            color: #646464;
+            border-bottom: 1px dotted #ddd;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            font-size: $fontSize-14;
+        }
+        .ant-col-12 {
+            position: relative;
+            text-align: center;
+            padding: 5px 0;
+            a {
+                display: block;
+                span {
+                    font-size: $fontSize-15;
+                }
+                &>p {
+                    color: #969696;
+                    margin-top: 3px;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 15%;
+                width: 1px;
+                height: 70%;
+                background: #ddd;
+            }
+            &:last-child {
+                &::before {
+                    display: none!important;
+                }
+            }
+        }
+    }
+}
+
+.ant-badge-not-a-wrapper {
+    margin: -5px 0 0 0px !important;
+}

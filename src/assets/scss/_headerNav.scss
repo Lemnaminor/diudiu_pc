@@ -51,8 +51,8 @@ $subNavHeight: 30px;
 
 .ant-menu-submenu {
     .ant-menu-item {
-        height: $subNavHeight;
-        line-height: $subNavHeight;
+        height: $subNavHeight!important;
+        line-height: $subNavHeight!important;
         margin-bottom: 4px!important;
         &:hover {
             color: #1890ff;
